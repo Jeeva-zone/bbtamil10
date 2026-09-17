@@ -1,0 +1,19 @@
+{
+  "name": "Bigg Boss Tamil — Live",
+  "short_name": "BB Tamil Live",
+  "description": "Clean, fast live stream player with HLS and platform embeds.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#08080e",
+  "theme_color": "#0b0b12",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

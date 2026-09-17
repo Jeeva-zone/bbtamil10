@@ -1,0 +1,76 @@
+{
+  "show": "Bigg Boss Tamil Season 10",
+  "tagline": "Live stream · pick a channel below",
+  "updated": "2026-09-17T06:40:00Z",
+  "playlist": "playlist.m3u",
+  "streams": [
+    {
+      "id": "twitch-arivumani1076",
+      "name": "Bigg Boss Tamil 10 — Channel 1",
+      "platform": "Twitch",
+      "type": "iframe",
+      "channel": "arivumani1076",
+      "url": "https://www.twitch.tv/arivumani1076",
+      "quality": "Live",
+      "language": "Tamil",
+      "status": "unknown",
+      "note": "Played through the Twitch player. The parent domain is filled in automatically."
+    },
+    {
+      "id": "twitch-arivumani1075",
+      "name": "Bigg Boss Tamil 10 — Channel 2",
+      "platform": "Twitch",
+      "type": "iframe",
+      "channel": "arivumani1075",
+      "url": "https://www.twitch.tv/arivumani1075",
+      "quality": "Live",
+      "language": "Tamil",
+      "status": "unknown",
+      "note": "Backup Twitch channel."
+    },
+    {
+      "id": "okru-main",
+      "name": "Bigg Boss Tamil 10 — Mirror",
+      "platform": "OK.ru",
+      "type": "iframe",
+      "url": "https://ok.ru/videoembed/9484647407325?nochat=1",
+      "quality": "Adaptive",
+      "language": "Tamil",
+      "status": "unknown",
+      "note": "OK.ru mirror. Swap the video id for the current one when it changes."
+    },
+    {
+      "id": "web-mirror-1",
+      "name": "Bigg Boss Tamil 10 — Web mirror 1",
+      "platform": "Web",
+      "type": "iframe",
+      "url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a",
+      "quality": "Adaptive",
+      "language": "Tamil",
+      "status": "unknown",
+      "note": "Third-party web player. Replace if it stops responding."
+    },
+    {
+      "id": "web-mirror-2",
+      "name": "Bigg Boss Tamil 10 — Web mirror 2",
+      "platform": "Web",
+      "type": "iframe",
+      "url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2",
+      "quality": "Adaptive",
+      "language": "Tamil",
+      "status": "unknown",
+      "note": "Second third-party web player."
+    },
+    {
+      "id": "demo-hls",
+      "name": "Player test stream (public HLS sample)",
+      "platform": "HLS",
+      "type": "hls",
+      "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+      "quality": "Adaptive",
+      "language": "—",
+      "status": "unknown",
+      "note": "Public test stream used to prove HLS playback works. Safe to delete."
+    }
+  ]
+}

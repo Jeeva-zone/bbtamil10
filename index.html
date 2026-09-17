@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0b12">
+<title>Bigg Boss Tamil — Live</title>
+<meta name="description" content="Watch the Bigg Boss Tamil live stream. Clean, fast player with HLS and platform embeds.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0b12'/><circle cx='16' cy='16' r='6' fill='%23ff4d4d'/></svg>">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><span class="dot"></span></span>
+      <div class="brand-text">
+        <h1 id="show-title">Bigg Boss Tamil — Live</h1>
+        <p id="show-tagline" class="muted"></p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span id="updated-at" class="muted small"></span>
+      <a class="ghost" href="playlist.m3u" download>Get M3U</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="stage-col">
+      <div id="stage" class="stage">
+        <video id="video" class="media" controls playsinline preload="metadata"></video>
+        <iframe id="iframe" class="media" hidden title="Stream player"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowfullscreen referrerpolicy="origin"></iframe>
+        <span id="status-pill" class="pill" data-state="idle">Idle</span>
+        <div id="overlay" class="overlay" hidden>
+          <span class="spinner" aria-hidden="true"></span>
+          <p id="overlay-title" class="overlay-title">Connecting…</p>
+          <p id="overlay-message" class="muted small"></p>
+          <button id="retry-overlay" class="primary" type="button">Try again</button>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div id="controls" class="controls"></div>
+        <div class="now">
+          <strong id="now-name">—</strong>
+          <span id="now-platform" class="muted small"></span>
+          <span id="now-note" class="muted small"></span>
+        </div>
+      </div>
+
+      <p class="hint muted small">
+        Shortcuts: <kbd>space</kbd> play · <kbd>m</kbd> mute · <kbd>f</kbd> fullscreen ·
+        <kbd>←</kbd><kbd>→</kbd> change channel · <kbd>r</kbd> reload
+      </p>
+    </section>
+
+    <aside class="list-col">
+      <div class="list-head">
+        <h2>Channels</h2>
+        <div id="filter-bar" class="filters"></div>
+      </div>
+      <div id="stream-list" class="stream-list"></div>
+      <p id="empty-state" class="muted small" hidden>No streams match this filter.</p>
+    </aside>
+  </main>
+
+  <div id="banner" class="banner" role="status" hidden></div>
+
+  <footer class="footer">
+    <span class="muted small">Player: HLS.js with native fallback · Twitch, YouTube and OK.ru embeds supported</span>
+    <span class="muted small"><a href="playlist_web.m3u" download>playlist_web.m3u</a></span>
+  </footer>
+
+</div>
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="twitch-arivumani1076" tvg-name="Bigg Boss Tamil 10 — Channel 1" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Channel 1 (Twitch)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=twitch-arivumani1076
+#EXTINF:-1 tvg-id="twitch-arivumani1075" tvg-name="Bigg Boss Tamil 10 — Channel 2" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Channel 2 (Twitch)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=twitch-arivumani1075
+#EXTINF:-1 tvg-id="okru-main" tvg-name="Bigg Boss Tamil 10 — Mirror" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Mirror (OK.ru)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=okru-main
+#EXTINF:-1 tvg-id="web-mirror-1" tvg-name="Bigg Boss Tamil 10 — Web mirror 1" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Web mirror 1 (Web)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=web-mirror-1
+#EXTINF:-1 tvg-id="web-mirror-2" tvg-name="Bigg Boss Tamil 10 — Web mirror 2" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Web mirror 2 (Web)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=web-mirror-2
+#EXTINF:-1 tvg-id="demo-hls" tvg-name="Player test stream (public HLS sample)" group-title="Bigg Boss Tamil Season 10",Player test stream (public HLS sample) (HLS)
+https://jeeva-zone.github.io/bbtamil10/player.html?s=demo-hls

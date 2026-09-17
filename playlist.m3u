@@ -1,0 +1,13 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="twitch-arivumani1076" tvg-name="Bigg Boss Tamil 10 — Channel 1" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Channel 1 (Twitch)
+https://www.twitch.tv/arivumani1076
+#EXTINF:-1 tvg-id="twitch-arivumani1075" tvg-name="Bigg Boss Tamil 10 — Channel 2" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Channel 2 (Twitch)
+https://www.twitch.tv/arivumani1075
+#EXTINF:-1 tvg-id="okru-main" tvg-name="Bigg Boss Tamil 10 — Mirror" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Mirror (OK.ru)
+https://ok.ru/videoembed/9484647407325?nochat=1
+#EXTINF:-1 tvg-id="web-mirror-1" tvg-name="Bigg Boss Tamil 10 — Web mirror 1" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Web mirror 1 (Web)
+https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a
+#EXTINF:-1 tvg-id="web-mirror-2" tvg-name="Bigg Boss Tamil 10 — Web mirror 2" group-title="Bigg Boss Tamil Season 10",Bigg Boss Tamil 10 — Web mirror 2 (Web)
+https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2
+#EXTINF:-1 tvg-id="demo-hls" tvg-name="Player test stream (public HLS sample)" group-title="Bigg Boss Tamil Season 10",Player test stream (public HLS sample) (HLS)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
