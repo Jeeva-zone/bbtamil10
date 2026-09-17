@@ -29,6 +29,9 @@ open it, pick a channel, it plays.
   shareable and usable as an IPTV target.
 - **Works offline.** A service worker keeps the app shell available; the stream list
   is always fetched network-first so updates land immediately.
+- **Reachability dots.** A scheduled workflow pings every stream and the channel list
+  shows the result. Green means *the address still answers* — it is not a liveness
+  check, and a Twitch channel page returns 200 whether or not anyone is broadcasting.
 - **Installable.** Web app manifest, so it can be added to a phone home screen.
 - **Keyboard driven.** <kbd>space</kbd> play/pause, <kbd>m</kbd> mute, <kbd>f</kbd>
   fullscreen, <kbd>←</kbd>/<kbd>→</kbd> change channel, <kbd>r</kbd> reload.

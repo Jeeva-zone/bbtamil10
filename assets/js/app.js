@@ -38,6 +38,27 @@ function button(id, iconName, label) {
   return el('button', { id, class: 'ctl', type: 'button', title: label, 'aria-label': label }, [icon(iconName)]);
 }
 
+/**
+ * Reachability dot. Deliberately worded as "reachable", not "live": the scheduled
+ * health check only proves the address still answers. A Twitch channel page
+ * returns 200 whether or not anyone is broadcasting.
+ */
+function reachDot(stream) {
+  const status = stream.status || 'unknown';
+  const titles = {
+    reachable: 'Address responds — this does not mean the stream is live right now',
+    unreachable: 'Address did not respond to the last check',
+    unknown: 'Not checked yet',
+  };
+  const label = { reachable: 'reachable', unreachable: 'unreachable', unknown: 'not checked' }[status] || 'not checked';
+  return el('span', {
+    class: `reach-dot reach-${status}`,
+    title: titles[status] || titles.unknown,
+    role: 'img',
+    'aria-label': label,
+  });
+}
+
 class App {
   constructor() {
     this.catalog = null;
@@ -186,6 +207,7 @@ class App {
           el('span', { class: 'stream-body' }, [
             el('span', { class: 'stream-name', text: stream.name }),
             el('span', { class: 'stream-meta' }, [
+              reachDot(stream),
               el('span', { class: `badge badge-${stream.platformKey}`, text: stream.platform }),
               stream.quality ? el('span', { class: 'muted', text: stream.quality }) : null,
               stream.language ? el('span', { class: 'muted', text: stream.language }) : null,

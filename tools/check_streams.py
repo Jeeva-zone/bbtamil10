@@ -4,13 +4,17 @@
     python3 tools/check_streams.py [--timeout 10]
 
 Writes back into data/streams.json:
-    status      "online" | "offline" | "unknown"
+    status      "reachable" | "unreachable" | "unknown"
     http_status the HTTP code we saw, when there was one
     checked_at  ISO-8601 UTC timestamp
 
+This measures REACHABILITY, not liveness. A Twitch channel page returns 200
+whether or not the channel is broadcasting, so "reachable" means "the address
+still answers", never "there is something to watch right now".
+
 Deliberately forgiving: many of these hosts refuse bots or sit behind a
 challenge page, so a 403 is reported as "unknown" rather than a hard failure.
-Only connection-level errors and 5xx responses count as offline.
+Only connection-level errors and 5xx responses count as unreachable.
 """
 from __future__ import annotations
 
@@ -34,14 +38,14 @@ def probe(url: str, timeout: int) -> tuple[str, int | None]:
     request = urllib.request.Request(url, headers=HEADERS, method="GET")
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
-            return ("online" if response.status < 400 else "unknown"), response.status
+            return ("reachable" if response.status < 400 else "unknown"), response.status
     except urllib.error.HTTPError as error:
         # The host answered - it just did not like the request.
         if error.code >= 500:
-            return "offline", error.code
+            return "unreachable", error.code
         return "unknown", error.code
     except Exception:
-        return "offline", None
+        return "unreachable", None
 
 
 def main() -> None:
@@ -51,7 +55,7 @@ def main() -> None:
 
     catalogue = json.loads(CATALOGUE.read_text(encoding="utf-8"))
     stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    counts = {"online": 0, "offline": 0, "unknown": 0}
+    counts = {"reachable": 0, "unreachable": 0, "unknown": 0}
 
     for stream in catalogue["streams"]:
         status, code = probe(stream["url"], args.timeout)
@@ -59,7 +63,7 @@ def main() -> None:
         stream["http_status"] = code
         stream["checked_at"] = stamp
         counts[status] += 1
-        print(f'{status:<8} {str(code or "-"):<5} {stream["id"]}')
+        print(f'{status:<12} {str(code or "-"):<5} {stream["id"]}')
 
     catalogue["updated"] = stamp
     CATALOGUE.write_text(json.dumps(catalogue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
@@ -68,3 +72,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

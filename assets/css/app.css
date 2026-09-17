@@ -339,6 +339,19 @@ kbd {
 .badge-web { background: #33415c; }
 .badge-dailymotion { background: #0d6efd; }
 
+/* Reachability, not liveness - see reachDot() in app.js */
+.reach-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--text-dim);
+}
+
+.reach-reachable { background: var(--ok); }
+.reach-unreachable { background: var(--accent); }
+.reach-unknown { background: var(--line); }
+
 /* ---------------------------------------------------------------- extras */
 
 .banner {
