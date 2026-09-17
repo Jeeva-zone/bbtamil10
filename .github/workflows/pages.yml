@@ -39,9 +39,11 @@ jobs:
           find _site -type f | sort
 
       - name: Configure Pages
+        # Pages must already be enabled for this repo with "GitHub Actions" as
+        # the source. The workflow token cannot create the site itself, so we do
+        # not ask it to (enablement: true fails with "Resource not accessible by
+        # integration").
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
