@@ -1,7 +1,7 @@
 {
   "show": "Bigg Boss Tamil Season 10",
   "tagline": "Live stream · pick a channel below",
-  "updated": "2026-09-20T00:19:18+00:00",
+  "updated": "2026-09-20T06:16:33+00:00",
   "playlist": "playlist.m3u",
   "streams": [
     {
@@ -16,7 +16,7 @@
       "status": "reachable",
       "note": "Played through the Twitch player. The parent domain is filled in automatically.",
       "http_status": 200,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     },
     {
       "id": "twitch-arivumani1075",
@@ -30,7 +30,7 @@
       "status": "reachable",
       "note": "Backup Twitch channel.",
       "http_status": 200,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     },
     {
       "id": "okru-main",
@@ -43,7 +43,7 @@
       "status": "reachable",
       "note": "OK.ru mirror. Swap the video id for the current one when it changes.",
       "http_status": 200,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     },
     {
       "id": "web-mirror-1",
@@ -56,7 +56,7 @@
       "status": "unreachable",
       "note": "Third-party web player. Replace if it stops responding.",
       "http_status": null,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     },
     {
       "id": "web-mirror-2",
@@ -69,7 +69,7 @@
       "status": "unreachable",
       "note": "Second third-party web player.",
       "http_status": null,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     },
     {
       "id": "demo-hls",
@@ -82,7 +82,7 @@
       "status": "reachable",
       "note": "Public test stream used to prove HLS playback works. Safe to delete.",
       "http_status": 200,
-      "checked_at": "2026-09-20T00:19:18+00:00"
+      "checked_at": "2026-09-20T06:16:33+00:00"
     }
   ]
 }
